@@ -42,17 +42,24 @@
             <div class="filter-row">
                 <div class="search-box">
                     <span class="search-icon">🔎</span>
-                    <input type="text" id="searchInput" placeholder="Buscar por nombre, género o plataforma..." oninput="applyFilters()">
+                    <input type="text" id="searchInput" placeholder="Buscar por nombre, consola..." oninput="applyFilters()">
                 </div>
                 
                 <div class="sort-box">
+                    <select id="genreFilter" onchange="applyFilters()">
+                        <option value="all">📁 Todos los tipos</option>
+                        <option value="free">💸 Juegos Gratis</option>
+                        </select>
+                </div>
+
+                <div class="sort-box">
                     <select id="sortField" onchange="applyFilters()">
-                        <option value="name">Ordenar por: Nombre</option>
-                        <option value="price">Ordenar por: Precio</option>
-                        <option value="rating">Ordenar por: Valoración</option>
-                        <option value="difficulty">Ordenar por: Dificultad</option>
-                        <option value="graphics">Ordenar por: Gráficos</option>
-                        <option value="replayability">Ordenar por: Rejugabilidad</option>
+                        <option value="name">Ordenar: Nombre</option>
+                        <option value="price">Ordenar: Precio</option>
+                        <option value="rating">Ordenar: Valoración</option>
+                        <option value="difficulty">Ordenar: Dificultad</option>
+                        <option value="graphics">Ordenar: Gráficos</option>
+                        <option value="replayability">Ordenar: Rejugabilidad</option>
                     </select>
                 </div>
 

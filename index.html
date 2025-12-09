@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comparador y Buscador de Juegos 2024</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🎮 Comparador de Juegos 2024</h1>
+            <p class="subtitle">Explora, busca y compara tus juegos favoritos</p>
+        </header>
+
+        <div class="selection-area">
+            <div class="game-selector">
+                <h2>Juego 1:</h2>
+                <div class="selected-game" id="selected1">
+                    <p class="placeholder">Haz clic en una tarjeta para seleccionar</p>
+                </div>
+            </div>
+
+            <div class="compare-button-container">
+                <button id="compareBtn" class="compare-btn" onclick="compareGames()" disabled>
+                    ⚔️ COMPARAR
+                </button>
+            </div>
+
+            <div class="game-selector">
+                <h2>Juego 2:</h2>
+                <div class="selected-game" id="selected2">
+                    <p class="placeholder">Haz clic en una tarjeta para seleccionar</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="controls-container">
+            <div class="controls-header">
+                🔍 <h3>Buscador Inteligente</h3>
+            </div>
+            <div class="filter-row">
+                <div class="search-box">
+                    <span class="search-icon">🔎</span>
+                    <input type="text" id="searchInput" placeholder="Buscar por nombre, género o plataforma..." oninput="applyFilters()">
+                </div>
+                
+                <div class="sort-box">
+                    <select id="sortField" onchange="applyFilters()">
+                        <option value="name">Ordenar por: Nombre</option>
+                        <option value="price">Ordenar por: Precio</option>
+                        <option value="rating">Ordenar por: Valoración</option>
+                        <option value="difficulty">Ordenar por: Dificultad</option>
+                        <option value="graphics">Ordenar por: Gráficos</option>
+                        <option value="replayability">Ordenar por: Rejugabilidad</option>
+                    </select>
+                </div>
+
+                <button id="sortOrderBtn" class="direction-btn" onclick="toggleSortOrder()">
+                    ⬆️ Ascendente
+                </button>
+            </div>
+            <div id="resultsCount" class="results-counter">Cargando juegos...</div>
+        </div>
+
+        <div class="games-grid" id="gamesGrid"></div>
+
+        <div class="comparison-result" id="comparisonResult">
+            <h2>📊 Resultado de la Comparación</h2>
+            <div class="comparison-content" id="comparisonContent"></div>
+            <button class="reset-btn" onclick="resetComparison()">🔄 Nueva Comparación</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

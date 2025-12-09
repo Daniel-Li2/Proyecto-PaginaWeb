@@ -20,7 +20,7 @@ h1 { font-size: 3em; margin-bottom: 10px; text-shadow: 2px 2px 4px rgba(0,0,0,0.
 .selected-stats { display: flex; gap: 15px; justify-content: center; font-size: 1em; color: #555; font-weight: bold; }
 
 /* --- BOTÓN COMPARAR --- */
-.compare-button-container { display: flex; align-items: center; justify-content: center; height: 180px; } /* Altura igual a las cajas */
+.compare-button-container { display: flex; align-items: center; justify-content: center; height: 180px; }
 .compare-btn { background: linear-gradient(135deg, #10b981 0%, #059669 100%); color: white; border: none; padding: 0; font-size: 1.2em; font-weight: bold; border-radius: 50%; cursor: pointer; box-shadow: 0 5px 20px rgba(0,0,0,0.3); transition: all 0.3s; width: 120px; height: 120px; display: flex; align-items: center; justify-content: center; text-transform: uppercase; }
 .compare-btn:hover:not(:disabled) { transform: scale(1.1); box-shadow: 0 10px 30px rgba(16, 185, 129, 0.6); }
 .compare-btn:disabled { background: #ccc; cursor: not-allowed; box-shadow: none; opacity: 0.7; }
@@ -28,13 +28,18 @@ h1 { font-size: 3em; margin-bottom: 10px; text-shadow: 2px 2px 4px rgba(0,0,0,0.
 /* --- PANEL DE FILTROS --- */
 .controls-container { background: white; padding: 25px; border-radius: 15px; margin-bottom: 40px; box-shadow: 0 10px 30px rgba(0,0,0,0.2); }
 .controls-header { margin-bottom: 20px; color: #333; font-size: 1.4em; display: flex; align-items: center; gap: 10px; }
-.filter-row { display: flex; gap: 20px; flex-wrap: wrap; align-items: center; }
-.search-box { flex: 2; min-width: 250px; position: relative; }
+.filter-row { display: flex; gap: 15px; flex-wrap: wrap; align-items: center; }
+
+/* Estilos ajustados para los inputs */
+.search-box { flex: 2; min-width: 200px; position: relative; }
 .search-box input { width: 100%; padding: 12px 20px; padding-left: 40px; border: 2px solid #eee; border-radius: 8px; font-size: 1em; outline: none; transition: border 0.3s; }
 .search-box input:focus { border-color: #2a5298; }
 .search-icon { position: absolute; left: 12px; top: 50%; transform: translateY(-50%); color: #999; }
-.sort-box { flex: 1; min-width: 200px; }
+
+.sort-box { flex: 1; min-width: 180px; } /* Ajustado para que quepan los dos selects */
 .sort-box select { width: 100%; padding: 12px; border: 2px solid #eee; border-radius: 8px; font-size: 1em; cursor: pointer; background-color: white; outline: none; }
+.sort-box select:focus { border-color: #2a5298; }
+
 .direction-btn { padding: 12px 20px; background: #2a5298; color: white; border: none; border-radius: 8px; font-size: 1em; cursor: pointer; transition: background 0.2s; display: flex; align-items: center; gap: 8px; min-width: 140px; justify-content: center;}
 .direction-btn:hover { background: #1e3c72; }
 .results-counter { margin-top: 15px; color: #666; font-size: 0.9em; font-style: italic; }
